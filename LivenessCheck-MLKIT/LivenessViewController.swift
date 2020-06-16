@@ -16,7 +16,7 @@ class LivenessViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     
     //MARK: - Internal Properties
-    private var videoCapture: CameraPreview!
+    private var videoCapture: CameraPreview?
     
     // MARK: - Data
     
@@ -36,24 +36,24 @@ class LivenessViewController: UIViewController {
     // MARK: - SetUp Video
     private func setUpCamera() {
         videoCapture = CameraPreview()
-        videoCapture.delegate = self
-        videoCapture.fps = 5
-        videoCapture.setUp(sessionPreset: .vga640x480) { success in
+        videoCapture?.delegate = self
+        videoCapture?.fps = 15
+        videoCapture?.setUp(sessionPreset: .vga640x480) { success in
             if success {
                 // add preview view on the layer
-                if let previewLayer = self.videoCapture.previewLayer {
+                if let previewLayer = self.videoCapture?.previewLayer {
                     self.videoPreview.layer.addSublayer(previewLayer)
                     self.resizePreviewLayer()
                 }
                 // start video preview when setup is done
-                self.videoCapture.start()
+                self.videoCapture?.start()
             }
         }
     }
     
     
     private func resizePreviewLayer() {
-        videoCapture.previewLayer?.frame = videoPreview.bounds
+        videoCapture?.previewLayer?.frame = videoPreview.bounds
     }
     
     
