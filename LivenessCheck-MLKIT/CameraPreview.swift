@@ -12,15 +12,15 @@ import AVFoundation
 import CoreVideo
 
 
-protocol VideoCaptureDelegate: class {
-    func videoCapture(_ capture: VideoCapture, didCaptureVideoFrame: CVPixelBuffer?, timestamp: CMTime)
+protocol CameraPreviewDelegate: class {
+    func videoCapture(_ capture: CameraPreview, didCaptureVideoFrame: CVPixelBuffer?, timestamp: CMTime)
 }
 
-final internal class VideoCapture: NSObject {
+final internal class CameraPreview: NSObject {
     
     // MARK: - Properties
     public var previewLayer: AVCaptureVideoPreviewLayer?
-    public weak var delegate: VideoCaptureDelegate?
+    public weak var delegate: CameraPreviewDelegate?
     public var fps = 15
     let captureSession = AVCaptureSession()
     let videoOutput = AVCaptureVideoDataOutput()
@@ -99,7 +99,7 @@ final internal class VideoCapture: NSObject {
 
 // MARK: - Extensions
 
-extension VideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
+extension CameraPreview: AVCaptureVideoDataOutputSampleBufferDelegate {
     public func captureOutput(_ output: AVCaptureOutput,
                               didOutput sampleBuffer: CMSampleBuffer,
                               from connection: AVCaptureConnection) {

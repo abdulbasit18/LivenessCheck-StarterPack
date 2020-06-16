@@ -16,7 +16,7 @@ class LivenessViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     
     //MARK: - Internal Properties
-    private var videoCapture: VideoCapture!
+    private var videoCapture: CameraPreview!
     
     // MARK: - Data
     
@@ -35,7 +35,7 @@ class LivenessViewController: UIViewController {
     
     // MARK: - SetUp Video
     private func setUpCamera() {
-        videoCapture = VideoCapture()
+        videoCapture = CameraPreview()
         videoCapture.delegate = self
         videoCapture.fps = 5
         videoCapture.setUp(sessionPreset: .vga640x480) { success in
@@ -61,9 +61,9 @@ class LivenessViewController: UIViewController {
 
 // MARK: - Video Delegate
 
-extension LivenessViewController: VideoCaptureDelegate {
+extension LivenessViewController: CameraPreviewDelegate {
     
-    func videoCapture(_ capture: VideoCapture, didCaptureVideoFrame pixelBuffer: CVPixelBuffer?, timestamp: CMTime) {
+    func videoCapture(_ capture: CameraPreview, didCaptureVideoFrame pixelBuffer: CVPixelBuffer?, timestamp: CMTime) {
         
         
     }

@@ -13,7 +13,7 @@
 		6E226BC92499526700636E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E226BC72499526700636E03 /* Main.storyboard */; };
 		6E226BCB2499526B00636E03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E226BCA2499526B00636E03 /* Assets.xcassets */; };
 		6E226BCE2499526B00636E03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E226BCC2499526B00636E03 /* LaunchScreen.storyboard */; };
-		6E226BD6249956C200636E03 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E226BD5249956C200636E03 /* VideoCapture.swift */; };
+		6E226BD6249956C200636E03 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E226BD5249956C200636E03 /* CameraPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		6E226BCA2499526B00636E03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E226BCD2499526B00636E03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E226BCF2499526B00636E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E226BD5249956C200636E03 /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		6E226BD5249956C200636E03 /* CameraPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		6E226BC02499526700636E03 /* LivenessCheck-MLKIT */ = {
 			isa = PBXGroup;
 			children = (
-				6E226BD5249956C200636E03 /* VideoCapture.swift */,
+				6E226BD5249956C200636E03 /* CameraPreview.swift */,
 				6E226BC12499526700636E03 /* AppDelegate.swift */,
 				6E226BC32499526700636E03 /* SceneDelegate.swift */,
 				6E226BC52499526700636E03 /* LivenessViewController.swift */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E226BD6249956C200636E03 /* VideoCapture.swift in Sources */,
+				6E226BD6249956C200636E03 /* CameraPreview.swift in Sources */,
 				6E226BC62499526700636E03 /* LivenessViewController.swift in Sources */,
 				6E226BC22499526700636E03 /* AppDelegate.swift in Sources */,
 				6E226BC42499526700636E03 /* SceneDelegate.swift in Sources */,
