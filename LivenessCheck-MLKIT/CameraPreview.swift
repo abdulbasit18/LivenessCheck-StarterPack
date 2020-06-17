@@ -2,8 +2,8 @@
 //  VideoCapture.swift
 //  VRPMLFramework
 //
-//  Created by Arqam Owais on 17/05/2020.
-//  Copyright © 2020 Arqam Owais. All rights reserved.
+//  Created by Abdul Basit on 17/05/2020.
+//  Copyright © 2020 Abdul Basit. All rights reserved.
 //
 
 import Foundation
