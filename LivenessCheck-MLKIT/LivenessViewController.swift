@@ -30,6 +30,9 @@ class LivenessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //Camera Setup
+        setUpCamera()
     }
     
     
@@ -56,6 +59,12 @@ class LivenessViewController: UIViewController {
         videoCapture?.previewLayer?.frame = videoPreview.bounds
     }
     
+    // MARK: - Update Step
+    
+    private func updateValidStep(number: Int) {
+        completedSteps.append(number)
+        tableView.reloadData()
+    }
     
 }
 
